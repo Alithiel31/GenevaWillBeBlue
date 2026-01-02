@@ -11,9 +11,6 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-// Constantes factorisées
-const pageTitle = "Gibliohtèque";
-let total = `${movies.length}`;
 
 //Route HOME
 app.get("/", (req, res)=> {
@@ -23,27 +20,33 @@ app.get("/", (req, res)=> {
         });
 });
 
-// Route MOVIES
-app.get("/movies", (req, res)=> {
-    const movieData = movies;
-    res.render("movies", {
-        pageTitle: pageTitle,
-        movieData, total});
+// Road Coming in Geneva
+
+
+
+// Road Discover Geneva
+app.get("/discover", (req, res)=> {
+    res.render("", {
+       
+    });
 });
 
-// Route MOVIE DETAIL
-app.get("/movies/:id", (req, res)=> {
-    const filmId = parseInt( req.params.id);
-    const film = movies.find(f => f.id === filmId);
-    if(!film){
-        return res.status(404).render("404", {
-            filmId: filmId,
-            pageTitle: "Film non trouvé"
-        });
-    } else
-    res.render("movie", {
-        movie: film, pageTitle: pageTitle, total})
+
+// Road Discover Locals foodies 
+
+app.get("/foodie", (req, res)=> {
+    res.render("", {
+       
     });
+});
+
+// Road Inscription
+app.get("/inscription", (req, res)=> {
+  
+      res.render("", {
+       
+    });
+});
 
 // Démarrage du serveur
 app.listen(port, () => {
