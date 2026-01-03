@@ -1,47 +1,197 @@
+/* --- 1. BASE & MISE EN PAGE --- */
 body {
-    background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px; /* Espace pour le header fixe */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+
+    /* Arrière-plan */
+    background-color: #0f0f0f;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url('https://www.okvoyage.com/wp-content/uploads/2008/06/geneve-vue-lac-suisse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
+/* --- 2. HEADER & NAVIGATION (L'accord parfait avec ton HTML) --- */
+.custom-header {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between; /* Pousse le logo à gauche et le menu à droite */
+    align-items: center;
+    height: 100%;
+}
+
+.nav-left, .nav-right {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white !important;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+/* Menu Déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-trigger {
+    color: #00d4ff !important;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 12px;
+    min-width: 220px;
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.dropdown-menu li a {
+    color: white !important;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(0, 212, 255, 0.15);
+    color: #00d4ff !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* --- 3. COMPTEUR & BOUTONS --- */
 .countdown-container {
     display: flex;
     justify-content: center;
     gap: 20px;
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.8);
     padding: 40px;
     border-radius: 20px;
-    color: #ffffff;
     flex-wrap: wrap;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border: 1px solid #333;
-}
-
-.time-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 100px;
+    backdrop-filter: blur(10px);
 }
 
 .time-box span {
     font-size: 3.5rem;
     font-weight: 800;
     color: #00d4ff;
+    display: block;
+    text-align: center;
 }
 
 .time-box small {
     font-size: 0.8rem;
     text-transform: uppercase;
     color: #888;
+    display: block;
+    text-align: center;
 }
 
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.5);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00d4ff;
+    color: #000;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* --- 4. MESSAGES --- */
 #message {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #00d4ff;
-    display: none;
+    font-weight: bold;
+    display: none; /* Cache le message par défaut */
+    text-align: center;
+    margin-top: 20px;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Prend tout l'espace disponible sous le header */
+    width: 100%;
 }

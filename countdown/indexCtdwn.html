@@ -1,34 +1,79 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Décompte 2026</title>
+    <title>Geneva Will be Blue</title>
     <link rel="stylesheet" href="styleCtdwn.css">
 </head>
+
 <body>
 
-    <div class="countdown-container" id="timer-wrapper">
-        <div class="time-box">
-            <span id="days">00</span>
-            <small>Jours</small>
+    <header class="custom-header">
+        <div class="header-container">
+            <nav class="nav-wrapper">
+                <ul class="nav-left">
+                    <li>
+                        <strong>
+                            <a href="/" class="brand">
+                                <img src="/GenevaWillBeBlue/pic/Untitled design (3).png" alt="Logo" class="logo-img">
+                                <span>Geneva Will Be blue !</span>
+                            </a>
+                        </strong>
+                    </li>
+                </ul>
+
+                <ul class="nav-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-trigger">Menu ▼</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/comingGva">Coming to Geneva</a></li>
+                            <li><a href="/faq/anomaly">Anomaly FAQ</a></li>
+                            <li><a href="/faq/general">General FAQ</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <div class="time-box">
-            <span id="hours">00</span>
-            <small>Heures</small>
+    </header>
+
+    <main class="main-content">
+        
+        <div class="countdown-container" id="timer-wrapper">
+            <div class="time-box">
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
         </div>
-        <div class="time-box">
-            <span id="minutes">00</span>
-            <small>Minutes</small>
+
+        <div class="button-group">
+            <a href="/" class="btn">Resistance Registration</a>
+            <a href="page1.html" class="btn">Coming to Geneva</a>
+            <a href="page2.html" class="btn">Anomaly FAQ</a>
+            <a href="page3.html" class="btn">General FAQ</a>
+            <a href="page4.html" class="btn">Contact</a>
         </div>
-        <div class="time-box">
-            <span id="seconds">00</span>
-            <small>Secondes</small>
-        </div>
-    </div>
-    
-    <div id="message">C'est le grand jour ! 🚀</div>
+
+        <div id="message">C'est le grand jour ! 🚀</div>
+        
+    </main>
 
     <script src="scriptCtdwn.js"></script>
 </body>
+
 </html>
