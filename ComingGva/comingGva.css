@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #7d7d7d;
+  background-color: #0f0f0f;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.okvoyage.com/wp-content/uploads/2008/06/geneve-vue-lac-suisse.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.budget-list {
+  padding-left: 40px;
+}
+
+a {
+  font-weight: bold;
+}
+
+.coming {
+  display: flex;
+  padding: 60px;
+  gap: 40px;
+}
+
+.left {
+  flex: 1;
+  color: white;
+}
+
+.left h1 {
+  color: #5aa0ff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.left p {
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.right {
+  width: 50rem;
+}
+
+.accordion {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-header:hover {
+  background: #f3f3f3;
+}
+
+.accordion-header.small {
+  font-size: 13px;
+  color: #5a7abf;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background: #f9f9f9;
+  text-emphasis-color: #888888;
+  font-size: 0.8rem;
+  font-family: 'Open Sans';
+  text-align: justify
+}
+
+.accordion-content a {
+  color: #0000EE;
+  text-decoration: underline;
+}
+
+.accordion-content.active {
+  display: block;
+}
+
+.accordion-content p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.accordion-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .coming {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .left h1 {
+    font-size: 26px;
+  }
+
+  .right {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .accordion-content {
+    font-size: 15px;
+  }
+}
+
+/* --- 1. BASE & MISE EN PAGE --- */
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+  /* Espace pour le header fixe */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'open-sans', sans-serif;
+  /* Arrière-plan */
+  background-color: #0f0f0f;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://www.okvoyage.com/wp-content/uploads/2008/06/geneve-vue-lac-suisse.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* --- 2. HEADER & NAVIGATION (L'accord parfait avec ton HTML) --- */
+.custom-header {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /* Pousse le logo à gauche et le menu à droite */
+  align-items: center;
+  height: 100%;
+}
+
+.nav-left,
+.nav-right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white !important;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* Menu Déroulant */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  color: #00d4ff !important;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  min-width: 220px;
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-menu li a {
+  color: white !important;
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(0, 212, 255, 0.15);
+  color: #00d4ff !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

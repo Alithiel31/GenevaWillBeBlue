@@ -1,11 +1,7 @@
-  <div id="anomaly-faq" class="section light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-6 order-lg-2">
+
           <h2>Anomaly FAQ</h2>
           <p>In Ingress, anomalies are the most exciting kind of competitive event.</p>
-        </div>
-        <div class="col-lg-6 order-lg-1">
+   
 
           <div class="accordion" id="anomaly-faq-accordion">
             <div class="card">
@@ -172,11 +168,3 @@
                 <p>Yes, you can provide them items, set up farming events prior to the anomaly, and tell other people
                   about the anomaly and where to sign up (here).
                 </p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
