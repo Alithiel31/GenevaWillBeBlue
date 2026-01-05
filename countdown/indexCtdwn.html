@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geneva Will be Blue</title>
-    <link rel="stylesheet" href="styleCtdwn.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/reset.css">
+
 </head>
 
 <body>
@@ -18,7 +20,7 @@
                         <strong>
                             <a href="/" class="brand">
                                 <img src="/pic/Untitled design (3).png" alt="Logo" class="logo-img">
-                                <span>Geneva Will Be blue - 20th June 2026 !</span>
+                                <span>Geneva Will Be blue !</span>
                             </a>
                         </strong>
                     </li>
@@ -28,11 +30,10 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-trigger">Menu ▼</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/comingGva">Coming to Geneva</a></li>
+                            <li><a href="/countdown/indexCtdwn.html">Home</a></li>
+                            <li><a href="/ComingGva/comingGva.html">Coming to Geneva</a></li>
                             <li><a href="/faqanomaly">Anomaly FAQ</a></li>
                             <li><a href="/faqgeneral">General FAQ</a></li>
-                            <li><a href="/contact">Contact</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -42,8 +43,8 @@
 
     <main class="main-content">
 
-        <h1>Countdown to the Geneva Anomaly </h1>
-        
+        <h1>Countdown for Geneva Anomaly - 20th June 2026</h1>
+
         <div class="countdown-container" id="timer-wrapper">
             <div class="time-box">
                 <span id="days">00</span>
@@ -64,18 +65,28 @@
         </div>
 
         <div class="button-group">
-            <a href="https://register.geneva.willbe.blue" class="btn">Resistance Registration</a>
-            <a href="page1.html" class="btn">Coming to Geneva</a>
+            <!-- Not open yet -> remove the <s> brackets when it's ready -->
+            <a href="https://register.geneva.willbe.blue" class="btn"><s>Resistance Registration</s></a>
+            <a href="https://geneva.anomaly.shop/" class="btn"><s>Swag Shop</s></a>
+            <!-- parts ready -->
+            <a href="/ComingGva/comingGva.html" class="btn">Coming to Geneva</a>
             <a href="page2.html" class="btn">Anomaly FAQ</a>
             <a href="page3.html" class="btn">General FAQ</a>
-            <a href="page4.html" class="btn">Contact</a>
         </div>
 
         <div id="message">C'est le grand jour ! 🚀</div>
-        
+
     </main>
 
-    <script src="scriptCtdwn.js"></script>
+    <script src="/scripts/scriptCtdwn.js"></script>
 </body>
 
 </html>
+
+<footer class="custom-footer">
+    <div class="footer-container">
+        <a href="mailto:genfwillbeblue@gmail.com" class="footer-contact">
+            <span class="contact-label">Contact :</span> genfwillbeblue@gmail.com
+        </a>
+    </div>
+</footer>

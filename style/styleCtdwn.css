@@ -2,7 +2,8 @@
 body {
     margin: 0;
     padding: 0;
-    padding-top: 100px; /* Espace pour le header fixe */
+    padding-top: 100px;
+    /* Espace pour le header fixe */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,15 +14,15 @@ body {
 
     /* Arrière-plan */
     background-color: #0f0f0f;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                      url('https://www.okvoyage.com/wp-content/uploads/2008/06/geneve-vue-lac-suisse.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://www.okvoyage.com/wp-content/uploads/2008/06/geneve-vue-lac-suisse.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-/* --- 2. HEADER & NAVIGATION (L'accord parfait avec ton HTML) --- */
+/* --- 2. HEADER & NAVIGATION --- */
 .custom-header {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(15px);
@@ -44,12 +45,13 @@ body {
 
 .nav-wrapper {
     display: flex;
-    justify-content: space-between; /* Pousse le logo à gauche et le menu à droite */
+    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
-.nav-left, .nav-right {
+.nav-left,
+.nav-right {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -81,7 +83,7 @@ body {
     font-weight: bold;
     text-decoration: none;
     padding: 10px 15px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .dropdown-menu {
@@ -96,7 +98,7 @@ body {
     min-width: 220px;
     padding: 10px 0;
     list-style: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .dropdown-menu li a {
@@ -125,7 +127,7 @@ body {
     padding: 40px;
     border-radius: 20px;
     flex-wrap: wrap;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     border: 1px solid #333;
     backdrop-filter: blur(10px);
 }
@@ -178,7 +180,8 @@ body {
     font-size: 2.5rem;
     color: #00d4ff;
     font-weight: bold;
-    display: none; /* Cache le message par défaut */
+    display: none;
+    /* Cache le message par défaut */
     text-align: center;
     margin-top: 20px;
     backdrop-filter: blur(10px);
@@ -192,6 +195,17 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1; /* Prend tout l'espace disponible sous le header */
+    flex: 1;
+    /* Prend tout l'espace disponible sous le header */
     width: 100%;
+}
+
+.main-content h1 {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    font-size: bold;
+    font-size: 30px;
+    text-align: center;
+
 }
