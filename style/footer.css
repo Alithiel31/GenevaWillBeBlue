@@ -1,0 +1,59 @@
+/* ==========================================================================
+   FOOTER - Style harmonisé avec le Header
+   ========================================================================== */
+
+.custom-footer {
+    /* Effet Glassmorphism identique au header */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    
+    /* Bordure subtile sur le dessus */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    width: 100%;
+    padding: 35px 0;
+    
+    /* Pousse le footer vers le bas si le contenu de la page est court */
+    margin-top: auto; 
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Style du lien de contact */
+.footer-contact {
+    color: white !important;
+    text-decoration: none;
+    font-family: 'open-sans', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+/* Le label "Contact :" en bleu cyan */
+.contact-label {
+    color: #00d4ff;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Effet au survol : changement de couleur et lueur bleue */
+.footer-contact:hover {
+    color: #00d4ff !important;
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px); /* Petit effet de soulèvement */
+}
+
+/* Optimisation mobile */
+@media (max-width: 600px) {
+    .footer-contact {
+        font-size: 0.85rem;
+    }
+}
