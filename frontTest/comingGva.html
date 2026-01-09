@@ -5,42 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geneva Will be Blue</title>
-    <link rel="stylesheet" href="/style/main.css">
-    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/main.css">
 </head>
-
-<header class="custom-header">
-    <div class="header-container">
-        <nav class="nav-wrapper">
-            <ul class="nav-left">
-                <li>
-                    <strong>
-                        <a href="/" class="brand">
-                            <img src="/pic/Untitled design (3).png" alt="Logo" class="logo-img">
-                            <span>Geneva Will Be blue !</span>
-                        </a>
-                    </strong>
-                </li>
-            </ul>
-
-            <ul class="nav-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-trigger">Menu ▼</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/countdown/indexCtdwn.html">Home</a></li>
-                        <li><a href="/comingGva/comingGva.html">Coming to Geneva</a></li>
-                        <li><a href="/anomalyFaq/anomalyFaq.html">Anomaly FAQ</a></li>
-                        <li><a href="/faqgeneral">General FAQ</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
 
 <body>
 
+    <header class="custom-header">
+        <div class="header-container">
+            <nav class="nav-wrapper" aria-label="Navigation principale">
+
+                <a href="/" class="brand" aria-label="Geneva Will Be blue ! - Retour à l'accueil">
+                    <img src="/pic/Untitled design (3).png" alt="" class="logo-img">
+                    <span aria-hidden="true">Geneva Will Be blue !</span>
+                </a>
+
+                <ul class="nav-right">
+                    <li class="dropdown">
+                        <button type="button" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false"
+                            id="menu-button">
+                            Menu <span aria-hidden="true">▼</span>
+                        </button>
+
+                        <ul class="dropdown-menu" aria-labelledby="menu-button">
+                            <li><a href="/frontTest/indexCtdwn.html">Home</a></li>
+                            <!-- Not open yet -> remove the <s> brackets when it's ready -->
+                            <li><a href="https://register.geneva.willbe.blue"><s>Resistance
+                                        Registration</s></a></li>
+                            <li><a href="https://geneva.anomaly.shop/"><s>Swag Shop</s></a></li>
+                            <li><a
+                                    href="https://www.geneve.com/en/plan-stay/tourist-information/download-the-discovery-map">Discovery
+                                    map</a></li>
+                            <li><a href="/frontTest/comingGva.html">Coming to Geneva</a></li>
+                            <li><a href="/frontTest/anomalyFaq.html">Anomaly FAQ</a></li>
+                            <li><a href="/frontTest/faqgeneral">General FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+<body>
+
+    <!-- Coming to GVA page content -->
     <section class="coming">
         <div class="left">
             <h1>Coming to Geneva…</h1>
@@ -170,29 +178,21 @@
 
                     <p>
                         Geneva Airport is also well connected by coach services, mainly to destinations in
-                        France.
-                        Some
-                        routes stop directly at Genève Aéroport, while others connect via nearby French towns
-                        such
-                        as
-                        Annecy, Chamonix or Lyon.
+                        France.Some routes stop directly at Genève Aéroport, while others connect via nearby French
+                        towns
+                        such as Annecy, Chamonix or Lyon.
                     </p>
 
                     <p>
                         Coach tickets are usually bound to a specific departure time. Some operators offer
-                        flexible
-                        ticket
-                        options or allow changes for a small fee, which can be useful when arriving by plane in
-                        case
-                        of
-                        flight delays, border controls or luggage collection taking longer than expected.
+                        flexible ticket options or allow changes for a small fee, which can be useful when arriving by
+                        plane in
+                        case of flight delays, border controls or luggage collection taking longer than expected.
                     </p>
 
                     <p>
                         You do not need to print your tickets. A QR code on your phone is sufficient and
-                        accepted by
-                        all
-                        major coach operators.
+                        accepted by all major coach operators.
                     </p>
 
                 </div>
@@ -202,54 +202,35 @@
 
                     <p>
                         To come to Geneva from mainland Europe, travelling by car is straightforward thanks to
-                        Switzerland's
-                        central location and well-developed motorway network. Geneva can be reached easily from
-                        France,
-                        Italy and Germany.
+                        Switzerland's central location and well-developed motorway network. Geneva can be reached easily
+                        from France, Italy and Germany.
                     </p>
 
                     <p>
                         If you are coming from France, Geneva is accessible via several major road routes,
-                        including
-                        from
-                        Lyon, Annecy and Chamonix. There are no border controls for passengers travelling within
-                        the
-                        Schengen
-                        area, but random customs checks may occur. This is also a convenient option if you are
-                        travelling
-                        with a dog.
+                        including from Lyon, Annecy and Chamonix. There are no border controls for passengers travelling
+                        within the Schengen area, but random customs checks may occur. This is also a convenient option
+                        if you are travelling with a dog.
                     </p>
 
                     <p>
                         If you are coming from Italy, you can reach Switzerland via the <a
-                            href="https://www.gotthardtunnel.ch/">Gotthard
-                            Tunnel</a>
-                        or other Alpine passes, depending on the season and traffic conditions. From Germany,
-                        the
-                        Swiss
-                        motorway network offers direct connections via Basel or Zurich.
+                            href="https://www.gotthardtunnel.ch/">Gotthard Tunnel</a> or other Alpine passes, depending
+                        on the season and traffic conditions. From Germany, the Swiss motorway network offers direct
+                        connections via Basel or Zurich.
                     </p>
 
                     <p>
                         Swiss motorways require a motorway vignette. You can buy a physical vignette or a
-                        digital
-                        e-vignette
-                        in advance or at the border. Once in Switzerland, motorway driving is generally smooth
-                        and
-                        well
-                        signposted.
+                        digital e-vignette in advance or at the border. Once in Switzerland, motorway driving is
+                        generally smooth and well signposted.
                     </p>
 
                     <p>
                         Parking in Geneva is limited and can be expensive. Some hotels offer private parking,
-                        but
-                        many
-                        do
-                        not. Instead, they may provide or sell temporary parking permits for nearby residential
-                        zones.
-                        These
-                        permits must be displayed clearly in your car and are usually valid for a limited
-                        duration.
+                        but many do not. Instead, they may provide or sell temporary parking permits for nearby
+                        residential zones. These permits must be displayed clearly in your car and are usually valid for
+                        a limited duration.
                     </p>
 
                     <p>
@@ -400,22 +381,19 @@
 
                 </div>
 
-
             </div>
 
     </section>
 
-        <footer class="custom-footer">
+    <!-- Section Footer -->
+    <footer class="custom-footer">
         <div class="footer-container">
             <a href="mailto:genfwillbeblue@gmail.com" class="footer-contact">
                 <span class="contact-label">Contact :</span> genfwillbeblue@gmail.com
             </a>
         </div>
     </footer>
-
-
-    <script src="/scripts/accordion_header.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
 </body>
 
 </html>
-
