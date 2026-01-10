@@ -1,0 +1,44 @@
+/* --- 1. BASE & MISE EN PAGE --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    /* Espace pour le header fixe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'open-sans', sans-serif;
+    color: #ffffff;
+
+    /* Arrière-plan */
+    background: #7d7d7d;
+    background-color: #0f0f0f;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://www.okvoyage.com/wp-content/uploads/2008/06/geneve-vue-lac-suisse.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,66 +1,53 @@
-<%- include('partials/header') %>
+<%- include("partials/header.ejs") -%>
+    <%- include("partials/navigation.ejs") -%>
 
-    <header class="custom-header">
-        <div class="header-container">
-            <nav class="nav-wrapper">
-                <ul class="nav-left">
-                    <li>
-                        <strong>
-                            <a href="/" class="brand">
-                                <img src="/GenevaWillBeBlue/pic/Untitled design (3).png" alt="Logo" class="logo-img">
-                                <span>Geneva Will Be blue !</span>
-                            </a>
-                        </strong>
-                    </li>
-                </ul>
+        <main class="main-content" id="main-content">
 
-                <ul class="nav-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-trigger">Menu ▼</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/comingGva">Coming to Geneva</a></li>
-                            <li><a href="/faq/anomaly">Anomaly FAQ</a></li>
-                            <li><a href="/faq/general">General FAQ</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <h1>Countdown for Geneva Anomaly - 20th June 2026</h1>
+
+            <div class="countdown-container" id="timer-wrapper" role="timer"
+                aria-label="Time remaining before the event" aria-live="off">
+                <div class="time-box">
+                    <span id="days" aria-describedby="label-days">00</span>
+                    <small id="label-days">Days</small>
+                </div>
+                <div class="time-box">
+                    <span id="hours" aria-describedby="label-hours">00</span>
+                    <small id="label-hours">Hours</small>
+                </div>
+                <div class="time-box">
+                    <span id="minutes" aria-describedby="label-minutes">00</span>
+                    <small id="label-minutes">Minutes</small>
+                </div>
+                <div class="time-box" aria-hidden="true">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+            </div>
+
+            <nav class="button-group" aria-label="Main navigation">
+
+                <a href="https://register.geneva.willbe.blue" class="btn" aria-disabled="true"
+                    aria-label="Resistance Registration - Not open yet">
+                    <s>Resistance Registration</s>
+                </a>
+
+                <a href="https://geneva.anomaly.shop/" class="btn" aria-disabled="true"
+                    aria-label="Swag Shop - Not open yet">
+                    <s>Swag Shop</s>
+                </a>
+
+                <a href="https://www.geneve.com/en/plan-stay/tourist-information/download-the-discovery-map"
+                    class="btn">
+                    Discovery map
+                </a>
+                <a href="/frontTest/comingGva.html" class="btn">Coming to Geneva</a>
+                <a href="/frontTest/anomalyFaq.html" class="btn">Anomaly FAQ</a>
+                <a href="/frontTest/faqgeneral" class="btn">General FAQ</a>
             </nav>
-        </div>
-    </header>
 
-    <main class="main-content">
+            <div id="message" role="status" aria-live="polite">C'est le grand jour ! 🚀</div>
 
-        <div class="countdown-container" id="timer-wrapper">
-            <div class="time-box">
-                <span id="days">00</span>
-                <small>Days</small>
-            </div>
-            <div class="time-box">
-                <span id="hours">00</span>
-                <small>Hours</small>
-            </div>
-            <div class="time-box">
-                <span id="minutes">00</span>
-                <small>Minutes</small>
-            </div>
-            <div class="time-box">
-                <span id="seconds">00</span>
-                <small>Seconds</small>
-            </div>
-        </div>
+        </main>
 
-        <div class="button-group">
-            <a href="/" class="btn">Resistance Registration</a>
-            <a href="page1.html" class="btn">Coming to Geneva</a>
-            <a href="page2.html" class="btn">Anomaly FAQ</a>
-            <a href="page3.html" class="btn">General FAQ</a>
-            <a href="page4.html" class="btn">Contact</a>
-        </div>
-
-        <div id="message">C'est le grand jour ! 🚀</div>
-
-    </main>
-
-    <%- include('partials/footer') %>
+        <%- include("partials/footer.ejs") -%>

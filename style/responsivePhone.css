@@ -1,0 +1,132 @@
+/* @media (max-width: 768px) {
+  .coming {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .left {
+    text-align: left;
+  }
+
+  .left h1 {
+    font-size: 26px;
+    margin-top: 50px;
+  }
+
+  .right {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .accordion-content {
+    font-size: 15px;
+  }
+}
+
+
+/* Responsive phone */
+/* @media (max-width: 600px) {
+    .footer-contact {
+        font-size: 0.85rem;
+    }
+} */
+
+/* --- Responsive Computer ---
+@media (min-width: 992px) {
+  .coming {
+    flex-direction: row; 
+    align-items: flex-start;
+    padding: 60px;
+    gap: 60px;
+  }
+
+  .left {
+    flex: 1;
+    order: 1; /* Texte à gauche */
+    /* padding-top: 50px;
+  }
+
+  .right {
+    flex: 1.2;
+    order: 2;  Accordéon à droite
+  }
+
+  .left h1 {
+    font-size: 48px;
+  }
+} */
+
+/* --- Variables pour une maintenance facile --- */
+:root {
+  --gap-desktop: 60px;
+  --padding-mobile: 1.5rem; /* 24px */
+  --padding-desktop: 3.75rem; /* 60px */
+  --font-h1-mobile: 1.625rem; /* 26px */
+  --font-h1-desktop: 3rem; /* 48px */
+}
+
+/* --- Styles de base (Mobile par défaut) --- */
+.coming {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-mobile);
+}
+
+.left {
+  text-align: left;
+}
+
+.left h1 {
+  font-size: var(--font-h1-mobile);
+  margin-top: 50px;
+}
+
+.right {
+  width: 100%;
+  max-width: 300px;
+}
+
+.accordion-header {
+  font-size: 1rem; /* 16px */
+  padding: 1rem;
+}
+
+.accordion-content {
+  font-size: 0.9375rem; /* 15px */
+}
+
+/* --- Téléphones très petits (Optionnel) --- */
+@media (max-width: 600px) {
+  .footer-contact {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Tablettes et Ordinateurs (Desktop-First transition) --- */
+@media (min-width: 992px) {
+  .coming {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: var(--padding-desktop);
+    gap: var(--gap-desktop);
+  }
+
+  .left {
+    flex: 1;
+    padding-top: 50px;
+  }
+
+  .right {
+    flex: 1.2;
+    max-width: none; /* On lève la limite de 300px sur grand écran */
+  }
+
+  .left h1 {
+    font-size: var(--font-h1-desktop);
+  }
+}
