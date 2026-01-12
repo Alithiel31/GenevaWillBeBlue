@@ -7,7 +7,7 @@ export default [
     {
         "id": "faq-2",
         "question": "Why is there an Anomaly in Geneva?",
-        "answer": "Following Niantic's selection of Geneva as a host city for the Q2 2026 Anomaly series, we are thrilled to bring the Ingress community to this iconic location. From its global significance to its deep-rooted place in XM lore, Geneva offers the perfect backdrop for an unforgettable operation. We look forward to delivering a world-class experience for agents everywhere!"
+        "answer": "Following Niantic's selection of Geneva as a host city for the Q2 2026 Anomaly series, we are thrilled to bring the Ingress community to this iconic location. From its global significance to its deep-rooted place in XM lore, Geneva offers the perfect backdrop for an unforgettable operation. We look forward to deliver a world-class experience for agents everywhere!"
     },
     {
         "id": "faq-3",

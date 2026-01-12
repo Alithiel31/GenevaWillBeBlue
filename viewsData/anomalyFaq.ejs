@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") -%>
+    <%- include("partials/navigation.ejs") -%>
+
+        <section class="coming">
+            <div class="grid">
+                <div class="left">
+                    <hgroup>
+                        <h1>Anomaly FAQ</h1>
+                        <p>In Ingress, anomalies are the most exciting kind of competitive event. Join the community in
+                            Geneva for an unforgettable experience.</p>
+                    </hgroup>
+                </div>
+
+                <div class="right">
+                    <div class="accordion">
+                        <% faqs.forEach(item=> { %>
+                            <div class="faq-item">
+                                <button class="accordion-header <%= item.active ? 'active' : '' %>">
+                                    <%= item.question %>
+                                </button>
+                                <div class="accordion-content <%= item.active ? 'active' : '' %>">
+                                    <p><%- item.answer %></p>
+                                </div>
+                            </div>
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include("partials/footer.ejs") -%>

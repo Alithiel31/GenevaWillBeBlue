@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") -%>
+    <%- include("partials/navigation.ejs") -%>
+
+        <section class="coming">
+            <div class="grid">
+                <div class="left">
+                    <hgroup>
+                        <h1>Coming to Geneva…</h1>
+                        <p><strong>There are lots of way to get to Geneva !</strong><br>
+                            Whether you're local, from Switzerland, or from far away, we will help you get here.</p>
+                    </hgroup>
+                </div>
+
+                <div class="right">
+                    <div class="accordion">
+
+                        <% travelOptions.forEach(option=> { %>
+                            <div class="faq-item">
+                                <h3>
+                                    <button type="button" class="accordion-header" id="btn-<%= option.id %>"
+                                        aria-expanded="false" aria-controls="content-<%= option.id %>">
+                                        <%= option.icon %>
+                                            <%= option.label %>
+                                    </button>
+                                </h3>
+
+                                <div id="content-<%= option.id %>" class="accordion-content" role="region"
+                                    aria-labelledby="btn-<%= option.id %>" hidden>
+                                    <div class="content-padding">
+                                        <%- option.content %>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- include("partials/footer.ejs") -%>
