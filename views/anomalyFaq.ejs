@@ -13,12 +13,16 @@
 
                 <div class="right">
                     <div class="accordion">
-                        <% faqs.forEach(item=> { %>
+                        <% faqs.forEach((item, index)=> { %>
                             <div class="faq-item">
-                                <button class="accordion-header <%= item.active ? 'active' : '' %>">
+                                <button class="accordion-header <%= item.active ? 'active' : '' %>"
+                                    aria-controls="faq-content-<%= index %>"
+                                    aria-expanded="<%= item.active ? 'true' : 'false' %>">
                                     <%= item.question %>
                                 </button>
-                                <div class="accordion-content <%= item.active ? 'active' : '' %>">
+                                <div id="faq-content-<%= index %>"
+                                    class="accordion-content <%= item.active ? 'active' : '' %>" <%=item.active ? ''
+                                    : 'hidden' %>>
                                     <p><%- item.answer %></p>
                                 </div>
                             </div>
@@ -27,5 +31,7 @@
                 </div>
             </div>
         </section>
+
+
 
         <%- include("footer.ejs") -%>

@@ -1,44 +1,45 @@
 export function initAccordion() {
   const headers = document.querySelectorAll('.accordion-header');
 
-  if (!headers.length) return;
 
   headers.forEach(header => {
-    header.addEventListener('click', () => {
-      // 1. On récupère l'id du contenu piloté par ce bouton
-      const contentId = header.getAttribute('aria-controls');
-      const content = document.getElementById(contentId);
+    header.addEventListener('click', (e) => {
 
-      // 2. On vérifie si l'élément est déjà ouvert
+      // 1. On cherche le contenu via l'ID (aria-controls)
+      const contentId = header.getAttribute('aria-controls');
+      let content = document.getElementById(contentId);
+
+      // 2. Sécurité : Si l'ID ne marche pas, on cherche le voisin direct
+
+      if (!content) {
+        content = header.parentElement.nextElementSibling;
+      }
+
+      if (!content) {
+        console.error("Impossible de trouver le contenu pour ce bouton.");
+        return;
+      }
+
       const isExpanded = header.getAttribute('aria-expanded') === 'true';
 
-      // 3. Fermer tous les autres accordéons (Optionnel, selon votre UX)
-      headers.forEach(otherHeader => {
-        if (otherHeader !== header) {
-          otherHeader.classList.remove('active');
-          otherHeader.setAttribute('aria-expanded', 'false');
-
-          const otherContent = document.getElementById(otherHeader.getAttribute('aria-controls'));
-          if (otherContent) {
-            otherContent.classList.remove('active');
-            otherContent.setAttribute('hidden', ''); // On cache physiquement
-          }
+      // 3. On ferme les autres
+      headers.forEach(h => {
+        h.classList.remove('active');
+        h.setAttribute('aria-expanded', 'false');
+        // On cherche le contenu du voisin pour fermer aussi
+        const c = document.getElementById(h.getAttribute('aria-controls')) || h.parentElement.nextElementSibling;
+        if (c && c.classList.contains('accordion-content')) {
+          c.classList.remove('active');
+          c.setAttribute('hidden', '');
         }
       });
 
-      // 4. Basculer l'état de l'accordéon actuel
-      if (isExpanded) {
-        // On ferme
-        header.classList.remove('active');
-        header.setAttribute('aria-expanded', 'false');
-        content.classList.remove('active');
-        content.setAttribute('hidden', '');
-      } else {
-        // On ouvre
+      // 4. On bascule l'état actuel
+      if (!isExpanded) {
         header.classList.add('active');
         header.setAttribute('aria-expanded', 'true');
         content.classList.add('active');
-        content.removeAttribute('hidden'); // On rend visible
+        content.removeAttribute('hidden');
       }
     });
   });

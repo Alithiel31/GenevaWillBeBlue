@@ -42,7 +42,7 @@
 }
 
 .accordion-content {
-  /* text-emphasis-color: #888888; */
+  text-emphasis-color: #888888;
   display: none;
   padding: 1rem;
   background: #ffffff;
@@ -57,8 +57,7 @@
   background: #f0f7ff;
   color: #2a5bd7;
   border-bottom: 2px solid #2a5bd7;
-  /* display: block; */
-  /* animation: fadeIn 0.4s ease; */
+  animation: fadeIn 0.4s ease;
 }
 
 .accordion-header:hover {
@@ -69,6 +68,22 @@
 .accordion-header.small {
   font-size: 0.8125rem;
   color: #3b5a9d;
+}
+
+.accordion-content.active {
+    display: block !important;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .accordion-content a:focus-visible {
@@ -125,7 +140,7 @@ a {
 
 .left h1 {
   color: #1a73e8;
-  font-size: 2rem ;
+  font-size: 2rem;
   margin-bottom: 0.625rem;
   margin-top: 3.125rem;
   text-transform: uppercase;
@@ -135,6 +150,6 @@ a {
 .left p {
   max-width: 31.25rem;
   line-height: 1.6;
-  opacity: 1; 
+  opacity: 1;
   color: #ffffff;
 }
