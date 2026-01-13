@@ -1,16 +1,23 @@
 {
   "name": "genevawillbeblue",
   "version": "1.0.0",
-  "description": "",
+  "description": "Informations et FAQ pour l'anomalie Ingress à Genève.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "modules",
+    "type": "git",
     "url": "git+https://github.com/Alithiel31/GenevaWillBeBlue.git"
   },
-  "keywords": [],
+  "keywords": [
+    "ingress",
+    "geneva",
+    "anomaly"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -18,11 +25,11 @@
   },
   "homepage": "https://github.com/Alithiel31/GenevaWillBeBlue#readme",
   "dependencies": {
-    "dotenv": "^17.2.3",
+    "dotenv": "^16.4.x",
     "ejs": "^3.1.10",
-    "express": "^5.2.1"
+    "express": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.0"
   }
 }

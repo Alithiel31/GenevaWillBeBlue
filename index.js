@@ -3,7 +3,7 @@ import "dotenv/config";
 
 
 // Importations des données
-import anomalyFaqs from "./data/dataAnomaly.js";
+import anomalyFaqs from "./data/dataAnomalyFaq.js";
 import travelRawData from "./data/dataComingGva.js";
 import generalFaqs from "./data/dataGeneralFaq.js";
 
@@ -75,7 +75,7 @@ app.listen(port, () => {
     console.log(`
     -------------------------------------------
     🚀 Serveur lancé : http://localhost:${port}
-    📂 Mode : Ingress Event Geneva 2026
+    📂 Mode : Ingress Anomaly Geneva 2026
     -------------------------------------------
     `);
 });
