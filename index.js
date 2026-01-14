@@ -66,6 +66,11 @@ app.get("/general-faq", (req, res) => {
     res.render("generalFaq", { pageTitle: "General FAQ", generalFaqs });
 });
 
+// Route générique pour tout ce qui est en construction
+app.get('/coming-soon', (req, res) => {
+    res.render('wip'); 
+});
+
 // 5. Gestion de l'erreur 404
 app.use((req, res) => {
     res.status(404).render("404", { pageTitle: "404 - Portal Severed" });

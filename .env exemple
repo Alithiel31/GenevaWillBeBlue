@@ -1,0 +1,4 @@
+# Le port sur lequel le serveur va tourner
+PORT=3000
+# Environnement (development, production)
+NODE_ENV=
