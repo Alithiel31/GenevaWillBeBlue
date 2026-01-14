@@ -1,0 +1,60 @@
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+   .error-main {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     min-height: 70vh;
+     text-align: center;
+     padding: 2rem;
+     color: #00d2ff;
+   }
+
+   .cat-container {
+     margin-top: 50px;
+     position: relative;
+     border: 3px solid #00d2ff;
+     box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+     border-radius: 8px;
+     overflow: hidden;
+     max-width: 100%;
+   }
+
+   .cat-img {
+     display: block;
+     max-width: 450px;
+     width: 100%;
+     height: auto;
+     transition: transform 0.3s ease;
+   }
+
+   .cat-img:hover {
+     transform: scale(1.05);
+   }
+
+   .error-description {
+     font-family: 'open-sans', sans-serif;
+     margin: 1.5rem 0;
+     background: rgba(0, 210, 255, 0.1);
+     padding: 10px;
+     border-radius: 4px;
+   }
+
+   .btn-redeploy {
+     display: inline-block;
+     margin-top: 1rem;
+     padding: 12px 25px;
+     border: 2px solid #00d2ff;
+     color: #00d2ff;
+     text-decoration: none;
+     font-weight: bold;
+     text-transform: uppercase;
+     transition: all 0.3s ease;
+   }
+
+   .btn-redeploy:hover {
+     background-color: #00d2ff;
+     color: #000;
+     box-shadow: 0 0 15px #00d2ff;
+   }
