@@ -1,0 +1,75 @@
+/* Menu Déroulant */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: rgba(20, 20, 20, 0.98);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    border-radius: 12px;
+    min-width: 220px;
+    padding: 0.5rem 0;
+    list-style: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    color: #ffffff !important;
+    padding: 0.75rem 1.25rem;
+    display: block;
+    text-decoration: none;
+    transition: background 0.2s;
+    font-size: 0.95rem;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent;
+    text-align: left;
+}
+
+.dropdown-menu li a:hover {
+    background: rgba(0, 212, 255, 0.15);
+    color: #00d4ff !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-trigger {
+    color: #00d4ff !important;
+    font-weight: 800;
+    text-decoration: none;
+    background: none;
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Focus visible pour le bouton principal */
+.dropdown-trigger:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* Optionnel : Changement au survol pour garder l'interactivité */
+.dropdown-trigger:hover {
+    text-decoration: underline;
+    filter: brightness(1.2);
+}
