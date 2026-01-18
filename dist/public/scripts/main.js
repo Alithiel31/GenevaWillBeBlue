@@ -20,7 +20,7 @@ const loadCSS = (href) => {
 
 Promise.all(cssFiles.map(loadCSS)).then(() => {
     // Show the body after all CSS is loaded
-    document.body.style.display = 'block';
+    document.body.style.display = 'flex';
 
     // Initialize components
     initAccordion();
