@@ -6,7 +6,8 @@ export function initCountdown() {
 
   const targetDate = new Date("June 20, 2026 00:00:00").getTime();
 
-  const timer = setInterval(() => {
+  // Function to update countdown display
+  const updateCountdown = () => {
     const now = new Date().getTime();
     const distance = targetDate - now;
 
@@ -31,5 +32,11 @@ export function initCountdown() {
       const message = document.getElementById("message");
       if (message) message.style.display = "block";
     }
-  }, 1000);
-}
+  };
+
+  // Call immediately to show correct values on page load
+  updateCountdown();
+  
+  // Then update every second
+  const timer = setInterval(updateCountdown, 1000)
+};
