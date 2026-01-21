@@ -54,6 +54,11 @@ const pages = [
         template: '404.ejs',
         output: '404.html',
         data: {}
+    },
+    {
+        template: 'wip.ejs',
+        output: 'coming-soon.html',
+        data: {}
     }
 ];
 
