@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+
+/* --- Variables de couleurs  --- */
+:root {
+    --ingress-blue: #00569d; /* Bleu contrasté pour l'accessibilité (AA) */
+    --ingress-blue-dark: #003d70;
+    --text-main: #1a1a1a;
+    --white: #ffffff;
+    --focus-orange: #ffcc00;
+}
+
+/* --- Vue temporaire (WIP) --- */
+
+.wip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.wip-content {
+    max-width: 600px;
+    width: 100%;
+}
+
+.wip-title {
+    font-size: 2.25rem;
+    color: var(--ingress-blue);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.wip-message {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.wip-image-container {
+    margin-bottom: 2.5rem;
+}
+
+.wip-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 4px solid var(--ingress-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Bouton interactif accessible */
+.btn-back {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--ingress-blue);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-back:hover {
+    background-color: var(--ingress-blue-dark);
+    transform: translateY(-2px);
+}
+
+/* État de focus pour la navigation au clavier (Touche Tab) */
+.btn-back:focus {
+    outline: 4px solid var(--focus-orange);
+    outline-offset: 4px;
+}
+
+.btn-back:active {
+    transform: translateY(0);
+}
+
+/* --- VUE TEMPORAIRE (WIP) --- */
+
+.wip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Remplit l'espace entre header et footer */
+    width: 100%;
+    padding: 2rem;
+    animation: fadeIn 0.8s ease-out; /* Réutilisation de votre animation existante */
+}
+
+.wip-content {
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.6); /* Fond sombre transparent pour la lisibilité */
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 114, 206, 0.3); /* Bordure bleue subtile */
+    backdrop-filter: blur(5px); /* Effet de flou sur l'image de fond */
+    text-align: center;
+}
+
+.wip-title {
+    font-size: 2rem;
+    color: #00aaff; /* Bleu plus clair pour ressortir sur le noir */
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wip-message {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.wip-image-container {
+    margin-bottom: 2rem;
+}
+
+.wip-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid #00aaff;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.3);
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #0072ce;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-back:hover {
+    background-color: #00aaff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 170, 255, 0.4);
+}
+
+.btn-back:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 4px;
+}
+
+/* --- STYLE POUR LES BOUTONS DU MENU "SOON" --- */
+
+.btn.btn-disabled {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+    pointer-events: auto; /* Permet quand même de cliquer pour aller sur la page WIP */
+}
+
+.btn.btn-disabled:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    transform: none;
+}
